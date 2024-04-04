@@ -1,24 +1,24 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./ProjectOfApi/NavBar";
-import CreateForm from "./ProjectOfApi/CreateForm";
-import TableRead from "./ProjectOfApi/TableRead";
-import ViewPart from "./ProjectOfApi/ViewPart";
-import Edit from "./ProjectOfApi/Edit";
+import React from 'react';
+import NavBar from './Ecom/NavBar';
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Cart from './Ecom/Cart';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route exact path="/" element={<CreateForm />} />
-        <Route path="/read" element={<TableRead />} />
-        <Route path="/view" element ={<ViewPart />} />
-        <Route path="/edit/:id" element={<Edit />}/>
+    return (
+    <>
+<BrowserRouter>
+<Routes>
+<Route exact path='/' element = {<NavBar/>}/>
+<Route path='cart' element= {<Cart />} />
+</Routes>
 
-      </Routes>
-    </BrowserRouter>
-  );
+</BrowserRouter>
+
+
+
+       
+    </>
+    );
 }
 
 export default App;
