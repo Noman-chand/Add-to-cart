@@ -1,13 +1,9 @@
-import { configureStore } from "@reduxjs/toolkit";
-import  fetchSlice from '../Features/apiSlice'
-import sliderSlice from "./sliderSlice";
+import { configureStore } from '@reduxjs/toolkit'
+import ApiSlice from './ApiSlice'
 const store = configureStore({
     reducer:{
-        apiData:fetchSlice,
-        slider:sliderSlice,
+        apiData:ApiSlice,
 
     }
-    
 })
-
 export default store
